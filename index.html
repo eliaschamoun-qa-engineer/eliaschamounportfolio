@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elias Chamoun</title>
+    <title>Elias Chamoun - Senior QA Automation Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            height: 300px;
-            max-height: 400px;
+            height: 350px;
+            max-height: 450px;
         }
 
         @media (min-width: 768px) {
@@ -42,7 +42,7 @@
         }
 
         .timeline-item.active .timeline-content {
-            max-height: 1000px;
+            max-height: 2000px; /* Increased to accommodate detailed CV points */
             opacity: 1;
         }
 
@@ -53,26 +53,41 @@
         .timeline-item.active .timeline-dot {
             transform: scale(1.25);
         }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A192F; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #233554; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64FFDA; 
+        }
     </style>
 </head>
 
 <body class="text-gray-200">
 
-    <header class="bg-[#0A192F]/90 backdrop-blur-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <header class="bg-[#0A192F]/90 backdrop-blur-lg sticky top-0 z-50 border-b border-[#233554]/50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <h1 class="text-xl font-bold text-white">Elias Chamoun</h1>
+                <h1 class="text-xl font-bold text-white tracking-wide">Elias Chamoun</h1>
             </div>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#overview" class="text-gray-300 hover:text-[#64FFDA] transition-colors">Overview</a>
-                <a href="#timeline" class="text-gray-300 hover:text-[#64FFDA] transition-colors">Timeline</a>
-                <a href="#skills" class="text-gray-300 hover:text-[#64FFDA] transition-colors">Skills</a>
-                <a href="#contact" class="text-gray-300 hover:text-[#64FFDA] transition-colors">Contact</a>
-                <a href="Elias-Chamoun-Resume[QA].pdf" download class="bg-[#64FFDA] text-[#0A192F] px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#52D1B6] transition-colors">Resume</a>
+            <div class="hidden md:flex space-x-8 items-center text-sm">
+                <a href="#overview" class="text-gray-300 hover:text-[#64FFDA] transition-colors font-medium">Overview</a>
+                <a href="#timeline" class="text-gray-300 hover:text-[#64FFDA] transition-colors font-medium">Experience</a>
+                <a href="#skills" class="text-gray-300 hover:text-[#64FFDA] transition-colors font-medium">Skills</a>
+                <a href="#contact" class="text-gray-300 hover:text-[#64FFDA] transition-colors font-medium">Contact</a>
+                <a href="Chamoun_Elias_CV.pdf" download class="bg-transparent border border-[#64FFDA] text-[#64FFDA] px-4 py-2 rounded rounded-sm hover:bg-[#64FFDA]/10 transition-colors">Resume</a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none hover:text-[#64FFDA]">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -80,105 +95,129 @@
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-[#0A192F]">
-            <a href="#overview" class="block py-2 px-4 text-sm hover:bg-[#112240]">Overview</a>
-            <a href="#timeline" class="block py-2 px-4 text-sm hover:bg-[#112240]">Timeline</a>
-            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-[#112240]">Skills</a>
-            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-[#112240]">Contact</a>
-            <!-- FIX: Added Resume link for mobile menu -->
-            <a href="Elias-Chamoun-Resume[QA].pdf" download class="block py-2 px-4 text-sm font-semibold text-[#64FFDA] hover:bg-[#112240]">Resume</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#112240] absolute w-full left-0 border-b border-[#233554]">
+            <a href="#overview" class="block py-3 px-6 text-sm hover:bg-[#233554] text-gray-300">Overview</a>
+            <a href="#timeline" class="block py-3 px-6 text-sm hover:bg-[#233554] text-gray-300">Experience</a>
+            <a href="#skills" class="block py-3 px-6 text-sm hover:bg-[#233554] text-gray-300">Skills</a>
+            <a href="#contact" class="block py-3 px-6 text-sm hover:bg-[#233554] text-gray-300">Contact</a>
+            <a href="Chamoun_Elias_CV.pdf" download class="block py-3 px-6 text-sm font-semibold text-[#64FFDA] hover:bg-[#233554]">Download Resume</a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-8 md:py-16">
+    <main class="container mx-auto px-6 py-12 md:py-20">
 
-        <section id="overview" class="text-center mb-16 md:mb-24">
-            <img src="eliaschamoun-profile.png" alt="Elias Chamoun" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-[#64FFDA]">
+        <section id="overview" class="text-center mb-20 md:mb-32 animate-fade-in">
+            <div class="relative w-36 h-36 mx-auto mb-8">
+                <img src="eliaschamoun-profile.png" alt="Elias Chamoun" class="w-full h-full rounded-full object-cover border-2 border-[#64FFDA] p-1 bg-[#112240]">
+            </div>
             
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">Senior QA Automation Engineer</h2>
-            <p class="text-xl md:text-2xl text-[#64FFDA] font-medium mt-2 mb-6">Let's build quality software together</p>
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">Senior Test Engineer</h2>
+            <p class="text-xl md:text-2xl text-[#64FFDA] font-medium mb-8">Architecting High-Assurance Quality Ecosystems</p>
 
-            <p class="max-w-3xl mx-auto text-lg text-gray-400 mb-8">
-                Highly accomplished and results-driven Senior QA Automation Engineer with over 5 years of progressive experience in leading and implementing robust quality assurance strategies. Proven expertise in designing, building, and scaling comprehensive automation frameworks (UI, API, Mobile, Performance) across diverse platforms, significantly reducing defect rates, accelerating release cycles, and optimizing testing processes. Adept at mentoring cross-functional QA teams, integrating automation into CI/CD pipelines, and driving continuous improvement to ensure enterprise-grade software quality.
+            <p class="max-w-3xl mx-auto text-lg text-gray-400 mb-10 leading-relaxed">
+                ISTQB Certified Senior Test Engineer with 6 years of cross-industry experience, utilizing both TDD and BDD in FinTech, Government, & Digital Banking. Specializing in architecting high-assurance quality ecosystems, I build and scale robust automation frameworks (Cypress, Playwright, Selenium, Appium), and champion 'Shift-Left' within Agile/DevOps. Proven experience in leading quality strategy, mentoring teams, and leveraging AI for continuous quality optimization.
             </p>
 
-            <div class="my-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
                 <a href="https://calendly.com/eliasshamoun96-es/book-a-call" 
                    target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-[#64FFDA] hover:bg-[#52D1B6] text-[#0A192F] font-semibold py-3 px-8 rounded-full transition-colors text-lg shadow-lg">
+                   class="bg-[#64FFDA] hover:bg-[#52D1B6] text-[#0A192F] font-bold py-3 px-8 rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-[#64FFDA]/20">
                     Book a Call
+                </a>
+                <a href="#contact" 
+                   class="border border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 font-bold py-3 px-8 rounded-md transition-all">
+                   Contact Me
                 </a>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                 <div class="bg-[#112240] p-6 rounded-xl shadow-lg border border-[#233554]/50">
-                    <h3 class="text-3xl font-bold text-[#64FFDA] mb-2">75%</h3>
-                    <p class="text-gray-300">Reduction in manual QA effort via Cypress framework architecture.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+                 <div class="bg-[#112240] p-6 rounded-lg hover:transform hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#64FFDA]/30">
+                    <div class="text-[#64FFDA] mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-2">75%</h3>
+                    <p class="text-gray-400 text-sm">Reduced maintenance overhead by redesigning legacy scripts to POM.</p>
                 </div>
-                <div class="bg-[#112240] p-6 rounded-xl shadow-lg border border-[#233554]/50">
-                    <h3 class="text-3xl font-bold text-[#64FFDA] mb-2">95%</h3>
-                    <p class="text-gray-300">Reduction in post-deployment bugs through early QA involvement.</p>
+                <div class="bg-[#112240] p-6 rounded-lg hover:transform hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#64FFDA]/30">
+                    <div class="text-[#64FFDA] mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-2">88%</h3>
+                    <p class="text-gray-400 text-sm">Increase in test coverage using AI-Driven Quality Engineering (Gemini CLI & MCP).</p>
                 </div>
-                <div class="bg-[#112240] p-6 rounded-xl shadow-lg border border-[#233554]/50">
-                    <h3 class="text-3xl font-bold text-[#64FFDA] mb-2">65%</h3>
-                    <p class="text-gray-300">Faster feedback loop achieved by embedding automation in Azure DevOps.</p>
+                <div class="bg-[#112240] p-6 rounded-lg hover:transform hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-[#64FFDA]/30">
+                    <div class="text-[#64FFDA] mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-2">&lt;3</h3>
+                    <p class="text-gray-400 text-sm">Production defects in 2025 via "Hunt Bugs" initiative and Risk-Based Testing.</p>
                 </div>
             </div>
         </section>
 
-        <section id="timeline" class="mb-16 md:mb-24">
-            <h2 class="text-3xl font-bold text-white text-center mb-4">Career Timeline</h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">An interactive overview of my career
-                progression. Click on any role to see detailed accomplishments and responsibilities.</p>
-            <div id="timeline-container" class="relative max-w-3xl mx-auto">
-                <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-[#233554]"></div>
+        <section id="timeline" class="mb-20 md:mb-32">
+            <h2 class="text-3xl font-bold text-white text-center mb-4 flex items-center justify-center">
+                <span class="text-[#64FFDA] mr-2">02.</span> Professional Experience
+            </h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Click on any role to view detailed achievements.</p>
+            
+            <div id="timeline-container" class="relative max-w-4xl mx-auto px-4 md:px-0">
+                <div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 h-full w-0.5 bg-[#233554]"></div>
             </div>
         </section>
 
-        <section id="skills" class="mb-16 md:mb-24">
-            <h2 class="text-3xl font-bold text-white text-center mb-4">Technical Skills Dashboard</h2>
-            <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">A visual representation of my technical
-                abilities. Use the filters to highlight specific skill sets.</p>
-            <div class="flex justify-center flex-wrap gap-2 mb-8">
-                <button data-filter="all"
-                    class="skill-filter-btn bg-[#64FFDA] text-[#0A192F] px-4 py-2 rounded-full text-sm font-semibold">All
-                    Skills</button>
-                <button data-filter="ui_mobile"
-                    class="skill-filter-btn bg-[#112240] text-gray-300 px-4 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554]">UI
-                    & Mobile</button>
-                <button data-filter="api_perf"
-                    class="skill-filter-btn bg-[#112240] text-gray-300 px-4 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554]">API
-                    & Performance</button>
-                <button data-filter="languages"
-                    class="skill-filter-btn bg-[#112240] text-gray-300 px-4 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554]">Languages</button>
-                <button data-filter="devops"
-                    class="skill-filter-btn bg-[#112240] text-gray-300 px-4 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554]">CI/CD
-                    & DevOps</button>
+        <section id="skills" class="mb-20 md:mb-32">
+            <h2 class="text-3xl font-bold text-white text-center mb-6 flex items-center justify-center">
+                <span class="text-[#64FFDA] mr-2">03.</span> Technical Competencies
+            </h2>
+            <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+                Comprehensive toolset spanning Automation, AI-Agents, and DevOps.
+            </p>
+            
+            <div class="flex justify-center flex-wrap gap-3 mb-10">
+                <button data-filter="all" class="skill-filter-btn bg-[#64FFDA] text-[#0A192F] px-5 py-2 rounded-full text-sm font-semibold transition-all hover:shadow-[0_0_15px_rgba(100,255,218,0.3)]">All Skills</button>
+                <button data-filter="automation" class="skill-filter-btn bg-[#112240] text-gray-300 px-5 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554] hover:text-[#64FFDA] transition-all">Automation</button>
+                <button data-filter="ai_qa" class="skill-filter-btn bg-[#112240] text-gray-300 px-5 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554] hover:text-[#64FFDA] transition-all">AI & Intelligent QA</button>
+                <button data-filter="languages" class="skill-filter-btn bg-[#112240] text-gray-300 px-5 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554] hover:text-[#64FFDA] transition-all">Languages</button>
+                <button data-filter="devops" class="skill-filter-btn bg-[#112240] text-gray-300 px-5 py-2 rounded-full text-sm font-semibold border border-[#233554] hover:bg-[#233554] hover:text-[#64FFDA] transition-all">Cloud & DevOps</button>
             </div>
-            <div class="chart-container bg-[#112240] p-4 rounded-xl shadow-lg border border-[#233554]/50">
+            
+            <div class="chart-container bg-[#112240] p-6 rounded-xl shadow-xl border border-[#233554]">
                 <canvas id="skillsChart"></canvas>
             </div>
         </section>
 
     </main>
 
-    <footer id="contact" class="bg-[#0A192F] text-gray-400 py-12">
+    <footer id="contact" class="bg-[#020c1b] text-gray-400 py-16 border-t border-[#233554]">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold text-white mb-4">Get In Touch</h2>
-            <p class="mb-6">I'm actively seeking new opportunities and collaboration and would be happy to connect.</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="mailto:eliasshamoun96.es@gmail.com"
-                    class="hover:text-[#64FFDA] transition-colors">eliasshamoun96.es@gmail.com</a>
-                <span class="hidden sm:inline text-gray-500">|</span>
-                <a href="https://www.linkedin.com/in/elias-chamoun-a97b92177/" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-[#64FFDA] transition-colors">LinkedIn Profile</a>
-                
+            <h2 class="text-3xl font-bold text-white mb-6">Get In Touch</h2>
+            <p class="mb-8 max-w-lg mx-auto text-lg">I'm actively seeking new opportunities and collaboration. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+                <a href="mailto:eliasshamoun96.es@gmail.com" class="flex items-center hover:text-[#64FFDA] transition-colors group">
+                    <svg class="w-5 h-5 mr-2 group-hover:translate-y-[-2px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    eliasshamoun96.es@gmail.com
+                </a>
+                <a href="tel:+96171904170" class="flex items-center hover:text-[#64FFDA] transition-colors group">
+                     <svg class="w-5 h-5 mr-2 group-hover:translate-y-[-2px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    +961 71 904 170
+                </a>
+                <a href="https://www.linkedin.com/in/elias-chamoun-a97b92177/" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-[#64FFDA] transition-colors group">
+                    <svg class="w-5 h-5 mr-2 group-hover:translate-y-[-2px] transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
             </div>
+            
+            <p class="text-sm text-gray-600 mt-12">
+                &copy; 2025 Elias Chamoun. Designed & Built with <span class="text-[#64FFDA]">HTML & Chart.js</span>
+            </p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Logic
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -189,14 +228,13 @@
             const mobileNavLinks = mobileMenu.querySelectorAll('a');
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    // Only hide menu for internal # links, not external or download links
                     if (link.getAttribute('href').startsWith('#')) {
                         mobileMenu.classList.add('hidden');
                     }
                 });
             });
 
-            // Updated timelineData: Removed "Cedar Quality Lab" entry
+            // Timeline Data - Exact Match to PDF
             const timelineData = [
                 {
                     role: "Founder, Cedar Quality Lab",
@@ -211,117 +249,148 @@
                     highlight: true
                 },
                 {
-                    role: "Senior QA Automation Engineer/Lead",
-                    company: "Real Time Technologies",
+                    role: "Senior QA Engineer",
+                    company: "Real Time Technologies (QPAY Team)",
                     period: "Nov 2022 - Present",
                     location: "Miami, USA",
                     details: [
-                        "Architected and scaled a highly resilient UI end-to-end automation framework using Cypress (JavaScript/TypeScript), covering both web and mobile fintech platforms, resulting in a 75% reduction in manual QA effort.",
-                        "Embedded test automation seamlessly into CI/CD pipelines (Azure DevOps), achieving a 65% faster feedback loop.",
-                        "Provided expert mentorship to junior QA engineers and led strategic test strategy reviews.",
-                        "Championed active collaboration across the entire SDLC, leading to a remarkable 95% reduction in post-deployment bugs."
+                        "<strong>Framework Modernization (POM):</strong> Architected a modular automation ecosystem by migrating legacy scripts to Playwright and Cypress using the Page Object Model (POM). Reduced maintenance overhead by 75% and accelerated execution for critical financial workflows.",
+                        "<strong>AI-Driven Quality Engineering:</strong> Engineered an industry-first AI-assisted testing workflow using Gemini CLI and MCP Chrome Dev Tools. Simulated complex user behaviors and edge cases, achieving an 88% increase in test coverage where standard automation failed.",
+                        "<strong>White-Box & Data Integrity:</strong> Developed and automated comprehensive White-Box integration tests with Cypress, rigorously validating business logic across multiple microservices and over 50 MSSQL database tables. This ensured 100% data consistency for real-time transaction ledgers and boosted test execution efficiency by 85%.",
+                        "<strong>Defect Lifecycle & RCA:</strong> Spearheaded the \"Hunt Bugs\" initiative by enforcing mandatory Root Cause Analysis (RCA) and strict reporting protocols using Kibana and Risk-Based Testing (RBT). Resulted in fewer than three production defects in 2025.",
+                        "<strong>DevOps & CI/CD Integration:</strong> Embedded automated quality gates into Azure DevOps pipelines (\"Automate Everything\" strategy), accelerating release velocity.",
+                        "<strong>Agile Collaboration:</strong> Drove \"Shift-Left\" testing methodologies, fostering a culture of shared quality ownership.",
+                        "<strong>Mentorship:</strong> Provided expert mentorship to 5+ QA engineers on automation architecture and AI agent integration."
                     ],
                     highlight: true
                 },
                 {
-                    role: "Lead QA Engineer",
+                    role: "Lead SDET (Seasonal Contract)",
                     company: "Social Nest",
                     period: "Oct 2024 - June 2025",
-                    location: "Dubai, Remote [Seasonal - Contract]",
+                    location: "Dubai (Remote)",
                     details: [
-                        "Spearheaded comprehensive QA efforts for a high-traffic social media e-commerce platform.",
-                        "Orchestrated over 15 A/B test cycles in close collaboration with Marketing and Product teams.",
-                        "Executed extensive UI and cross-browser/device compatibility testing using BrowserStack.",
-                        "Developed and integrated a comprehensive API Testing suite with Postman and a performance/load testing suite with JMETER."
+                        "<strong>BDD Framework Architecture (Playwright/TypeScript):</strong> Spearheaded the adoption of a BDD ecosystem. Designed a modular framework with reusable step definitions, ensuring 100% alignment between QA automation and business acceptance criteria across 100+ critical feature files.",
+                        "<strong>Mobile & Cloud Automation:</strong> Architected a scalable mobile testing grid using Appium and BrowserStack. Reduced regression cycles by 40% while ensuring consistent UI performance across fragmented mobile environments.",
+                        "<strong>Strategic Testing & Log Analysis:</strong> Applied Risk-Based Testing (RBT) to prioritize high-traffic user flows. Designed 250+ scenarios targeting \"marketing spike\" conditions, catching 95% of functional defects pre-release.",
+                        "<strong>Performance Engineering:</strong> Orchestrated high-impact load testing using Apache JMeter, identifying and resolving critical API gateway bottlenecks (30,000+ concurrent users).",
+                        "<strong>Stakeholder Transparency:</strong> Developed comprehensive QA dashboards in ClickUp and validated backend data using SQL.",
+                        "<strong>CI/CD & API Testing:</strong> Integrated scripts via GitHub Actions/Slack for automated regression. Executed 200+ API validation tests using Postman with Newman, reducing integration defects by 30%."
                     ],
                     highlight: true
                 },
                 {
-                    role: "Senior QA Automation Engineer",
-                    company: "Siren Analytics/CME",
+                    role: "Senior QA Automation Engineer (Government Sector)",
+                    company: "Siren Analytics / CME",
                     period: "Apr 2021 - Nov 2022",
                     location: "Beirut, Lebanon",
                     details: [
-                        "Built and deployed scalable automation frameworks utilizing Java, Selenium, and TestNG.",
-                        "Conducted critical API testing and performance validation with REST Assured and Apache JMeter for large-scale Government projects.",
-                        "Collaborated proactively with development, DevOps, and product teams to refine QA processes."
+                        "<strong>Defect Prevention Strategy:</strong> Streamlined the Defect Management Process using Jira. Enforced strict reporting standards that reduced bug recurrence and accelerated time-to-market by 40%.",
+                        "<strong>Collaborative Testing:</strong> Worked seamlessly within cross-functional teams to integrate automated quality gates into the definition of done (DoD).",
+                        "<strong>Scalable Automation:</strong> Deployed a scalable Java/Selenium framework, achieving an 83% reduction in manual regression workload.",
+                        "<strong>API Validation:</strong> Conducted rigorous API testing using REST Assured to validate complex data payloads for government-scale legacy migrations (5 million citizens)."
                     ],
-                    highlight: true
+                    highlight: false
                 },
                 {
-                    role: "Test Engineer",
-                    company: "sKash",
+                    role: "Test Engineer (Digital Banking)",
+                    company: "skash",
                     period: "Feb 2020 - Apr 2021",
                     location: "Beirut, Lebanon",
                     details: [
-                        "Developed and implemented robust automation tests for mobile applications within a C#/.NET-based digital banking environment using Selenium.",
-                        "This role provided foundational experience for planning and executing testing environment migration initiatives.",
-                        "Conducted thorough functional and regression testing on mobile banking transactions on iOS & Android platforms."
+                        "<strong>Automation Framework:</strong> Developed automation for digital banking solutions using Selenium SpecFlow and Cucumber (C#), ensuring BDD alignment between technical and non-technical stakeholders.",
+                        "<strong>Efficiency:</strong> Reduced manual regression effort by 25% through strategic automation of repetitive financial transaction flows."
                     ],
-                    highlight: true
+                    highlight: false
                 },
                 {
                     role: "QA Automation Engineer",
-                    company: "Layer/Ubanquity",
+                    company: "Layer / Ubanquity",
                     period: "Jul 2019 - Feb 2020",
                     location: "Beirut, Lebanon",
                     details: [
-                        "Developed and implemented automation tests for mobile applications in digital banking solutions using Flutter.",
-                        "Executed comprehensive manual testing across various browsers and numerous devices."
+                        "<strong>Mobile Automation:</strong> Implemented Flutter-based automation tests, contributing to a 25% increase in testing velocity for mobile applications."
                     ],
-                    highlight: true
+                    highlight: false
                 }
             ];
 
             const timelineContainer = document.getElementById('timeline-container');
+            
             timelineData.forEach((item, index) => {
-                const alignmentClass = index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8';
-                const dotPosition = index % 2 === 0 ? 'md:right-[-9px]' : 'md:left-[-9px]';
-
+                // Determine layout based on index (left or right)
+                // Mobile: all left. Desktop: alternating.
+                const isEven = index % 2 === 0;
+                
                 const timelineItem = document.createElement('div');
-                timelineItem.className = 'timeline-item mb-8 md:mb-2 relative cursor-pointer';
-                timelineItem.innerHTML = `
-                    <div class="md:absolute top-3 ${dotPosition} w-4 h-4 rounded-full timeline-dot ${item.highlight ? 'bg-[#64FFDA]' : 'bg-[#233554]'}"></div>
-                    <div class="${alignmentClass} w-full md:w-1/2 ${index % 2 === 0 ? '' : 'md:ml-auto'}">
-                        <div class="p-4 bg-[#112240] rounded-lg shadow-md border border-[#233554]/60">
-                            <p class="text-sm text-gray-400">${item.period}</p>
-                            <h3 class="font-bold text-white text-lg">${item.role}</h3>
-                            <p class="text-md text-gray-300">${item.company} - ${item.location}</p>
-                            <div class="timeline-content mt-2">
-                                <ul class="list-disc list-inside text-sm text-left text-gray-400">
-                                    ${item.details.map(d => `<li>${d}</li>`).join('')}
-                                </ul>
+                timelineItem.className = 'timeline-item mb-8 relative w-full flex ' + (isEven ? 'md:justify-start' : 'md:justify-end');
+                
+                // Dot
+                const dot = `<div class="absolute left-[15px] md:left-1/2 md:-translate-x-1/2 top-0 w-4 h-4 rounded-full timeline-dot border-2 border-[#0A192F] z-10 ${item.highlight ? 'bg-[#64FFDA]' : 'bg-[#233554]'}"></div>`;
+                
+                // Content Box
+                const content = `
+                    <div class="ml-10 md:ml-0 w-full md:w-[45%] bg-[#112240] p-6 rounded-lg shadow-lg border border-[#233554] cursor-pointer hover:border-[#64FFDA]/50 transition-colors group">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-bold text-white text-lg group-hover:text-[#64FFDA] transition-colors">${item.role}</h3>
+                                <p class="text-[#64FFDA] font-medium text-sm">${item.company}</p>
                             </div>
+                            <span class="text-xs bg-[#233554] px-2 py-1 rounded text-gray-300 whitespace-nowrap">${item.period}</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-3 flex items-center">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            ${item.location}
+                        </p>
+                        <div class="timeline-content">
+                            <ul class="space-y-2 text-sm text-gray-400 list-none mt-2 border-t border-[#233554] pt-2">
+                                ${item.details.map(d => `<li class="pl-4 relative before:content-['▹'] before:absolute before:left-0 before:text-[#64FFDA]">${d}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="text-center mt-2">
+                             <span class="text-xs text-[#64FFDA] opacity-0 group-hover:opacity-100 transition-opacity">Click to expand details</span>
                         </div>
                     </div>
                 `;
-                timelineContainer.appendChild(timelineItem);
-            });
 
-            document.querySelectorAll('.timeline-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    item.classList.toggle('active');
+                timelineItem.innerHTML = dot + content;
+                timelineContainer.appendChild(timelineItem);
+                
+                // Add click event for expansion
+                const contentBox = timelineItem.querySelector('.bg-\\[\\#112240\\]');
+                contentBox.addEventListener('click', () => {
+                    timelineItem.classList.toggle('active');
                 });
             });
 
+            // Skills Data - Exact Match to Core Competencies
             const allSkills = {
-                ui_mobile: [
-                    { name: 'Playwright', level: 5 }, { name: 'Cypress.io', level: 5 },
-                    { name: 'Selenium', level: 5 }, { name: 'Appium', level: 4 },
-                    { name: 'WebDriverIO', level: 3 }
-                ],
-                api_perf: [
-                    { name: 'REST Assured', level: 5 }, { name: 'Postman', level: 5 },
+                automation: [
+                    { name: 'Playwright', level: 5 }, 
+                    { name: 'Cypress', level: 5 },
+                    { name: 'Selenium', level: 5 }, 
+                    { name: 'Appium', level: 4 },
+                    { name: 'SpecFlow/Cucumber', level: 5 },
+                    { name: 'REST Assured', level: 5 },
                     { name: 'JMeter', level: 4 }
                 ],
+                ai_qa: [
+                    { name: 'Gemini CLI', level: 5 }, 
+                    { name: 'MCP (Model Context Protocol)', level: 4 },
+                    { name: 'AI-Agent Simulation', level: 5 },
+                    { name: 'Large Scale Data Validation', level: 4 }
+                ],
                 languages: [
-                    { name: 'TypeScript', level: 5 }, { name: 'JavaScript', level: 5 },
-                    { name: 'Java', level: 3 }, { name: 'C#', level: 3 },
-                    { name: 'Dart', level: 1 }
+                    { name: 'TypeScript/JavaScript', level: 5 },
+                    { name: 'Java', level: 4 },
+                    { name: 'C#', level: 4 },
+                    { name: 'Python', level: 3 }
                 ],
                 devops: [
-                    { name: 'Azure DevOps', level: 5 }, { name: 'GitHub Actions', level: 4 },
-                    { name: 'CI/CD Integration', level: 5 }
+                    { name: 'Azure DevOps', level: 5 }, 
+                    { name: 'GitHub Actions', level: 4 },
+                    { name: 'Docker/K8s', level: 3 },
+                    { name: 'BrowserStack', level: 5 }
                 ]
             };
 
@@ -331,11 +400,13 @@
                 data: {
                     labels: [],
                     datasets: [{
-                        label: 'Proficiency Level',
+                        label: 'Proficiency',
                         data: [],
-                        backgroundColor: 'rgba(100, 255, 218, 0.6)',
-                        borderColor: 'rgba(52, 209, 182, 1)',
-                        borderWidth: 1
+                        backgroundColor: 'rgba(100, 255, 218, 0.2)',
+                        borderColor: '#64FFDA',
+                        borderWidth: 2,
+                        borderRadius: 4,
+                        barPercentage: 0.6
                     }]
                 },
                 options: {
@@ -346,29 +417,31 @@
                         x: {
                             beginAtZero: true,
                             max: 5,
-                            grid: { display: false },
-                            ticks: { display: false }
+                            grid: { color: '#233554' },
+                            ticks: { display: false } // Hide numbers on X axis
                         },
                         y: {
                             grid: { display: false },
                             ticks: {
-                                color: '#E0E0E0'
+                                color: '#A8B2D1',
+                                font: {
+                                    family: 'Inter',
+                                    size: 12
+                                }
                             }
                         }
                     },
                     plugins: {
                         legend: { display: false },
                         tooltip: {
+                            backgroundColor: '#112240',
+                            titleColor: '#64FFDA',
+                            bodyColor: '#E0E0E0',
+                            borderColor: '#233554',
+                            borderWidth: 1,
                             callbacks: {
                                 label: function (context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed.x !== null) {
-                                        label += context.parsed.x + '/5';
-                                    }
-                                    return label;
+                                    return 'Level: ' + context.parsed.x + '/5';
                                 }
                             }
                         }
@@ -390,7 +463,9 @@
 
                 let labels = [];
                 let data = [];
+                
                 if (filter === 'all') {
+                    // Combine all categories
                     Object.values(allSkills).flat().forEach(skill => {
                         labels.push(skill.name);
                         data.push(skill.level);
@@ -413,9 +488,9 @@
                 });
             });
 
+            // Initialize chart with all skills
             updateChart('all');
         });
     </script>
 </body>
-
 </html>
